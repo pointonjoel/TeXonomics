@@ -1,0 +1,59 @@
+\documentclass[class=article, crop=false]{standalone}
+\usepackage{my_preamble}
+
+\tikzset{
+  % Two node styles for game trees: solid and hollow
+  solid node/.style={circle,draw,inner sep=2,fill=black},
+  hollow node/.style={circle,draw,inner sep=2},
+  empty node/.style={rectangle,draw,fill=white,color=white}
+}
+
+% macro for entering payoffs
+\newcommand\payoff[1]{
+  $\begin{pmatrix} #1 \end{pmatrix}$
+}
+
+\begin{document}
+
+\begin{tikzpicture}[every level 0 node/.style={draw,hollow node},
+                   every level 1 node/.style={draw,hollow node},
+                   every level 2 node/.style={draw,hollow node}, 
+                   every level 3 node/.style={draw, empty node},
+                   every level 4 node/.style={draw, empty node},
+                   grow=right,
+                   level distance=.85in,
+                   sibling distance=.65in,
+                   edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}]
+                   \tikzstyle{edge from parent}=[draw,black,very thick] 
+\Tree [.\node[label=left:{{Entrant}}]{};  
+        \edge node [auto=right] {1-p}; [.\node[label=left:{{Low cost}}]{}; %bottom half
+			\edge node [auto=right] {}; [.\node [label=left:{Stay out}] {}; 
+				\edge node [auto=right] {}; [.\node [label=left:{{Low output}}, label=right:{\payoff{0, 10}}] {};
+				]
+				\edge node [auto=right] {}; [.\node [label=left:{{High output}}, label=right:{\payoff{0, 12}}] {};
+				]
+			]
+			\edge node [auto=left] {}; [.\node [label=left:{Enter}] {}; 
+				\edge node [auto=right] {}; [.\node [label=left:{{Low output}}, label=right:{\payoff{4,5}}] {};
+				]
+				\edge node [auto=right] {}; [.\node [label=left:{{High output}}, label=right:{\payoff{-3, 6}}] {};
+				]
+			]
+		]
+        \edge node [auto=left] {p}; [.\node[label=left:{{High cost}}] {};  %top half
+			\edge node [auto=right] {}; [.\node[label=left:{{Stay out}}] {}; 
+				\edge node [auto=right] {}; [.\node [label=left:{{Low output}}, label=right:{\payoff{0,9}}] {};
+				]
+				\edge node [auto=right] {}; [.\node [label=left:{{High output}}, label=right:{\payoff{0, 8}}] {};
+				]
+			]
+			\edge node [auto=left] {}; [.\node [label=left:{Enter}] {}; 
+				\edge node [auto=right] {}; [.\node [label=left:{{Low output}}, label=right:{\payoff{4,4}}] {};
+				]
+				\edge node [auto=right] {}; [.\node [label=left:{{High output}}, label=right:{\payoff{-3,3}}] {};
+				]
+			]
+		]
+]
+\end{tikzpicture}
+\end{document}

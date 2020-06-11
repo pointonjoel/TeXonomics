@@ -1,0 +1,27 @@
+\documentclass[class=article, crop=false]{standalone}
+\usepackage{my_preamble}
+\begin{document}
+\begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
+ \draw (0,3.5) node[left]{$y=Y/L$} -- (0,0) node[below left] {$0$} 
+  -- (6,0) node[below right]{$k=K/L$}; %labels
+\draw [thick, name path = F1] (0,0) to [out=75,in=180] (5.5,3.2); %Production function
+\draw [thick, name path = F1] (0,0) to [out=55,in=180] (5.5,1.8); %Savings function
+\draw [thick, name path = F1] (0,0) to (5.5,2.5); %Depreciation/Pop/TFP growth
+\draw [dotted, name path = F1] (0,1.6) to (5.5,4.1); %Tangency with PF line
+
+ \draw[loosely dotted] (0,1.8) node[left]{$\bar{y}$} -| node[pos=0.25,below=3mm] {}
+  (3.9,0) node[below]{$\bar{k}$}; %steady state dotted lines
+ \draw[loosely dotted] (0,2.6) node[left]{$y^{*}$} -| node[pos=0.25,below=3mm] {}
+  (2.3,0) node[below]{$k^{*}$}; %optimumdotted lines
+ %\draw [decorate,decoration=1brace,amplitude=4pt, mirrorl,xshift=0pt,yshift=-3pt]
+% \draw [decorate,decoration={brace,amplitude=10pt},xshift=-4pt,yshift=0pt]
+%(0.5,0.5) -- (0.5,5.0) node [black,midway,xshift=-0.6cm]
+
+\node[right] at (5.5,3.2) {$y=f
+(k)$}; %Production function label
+\node[right] at (5.5,1.8) {$saving=s*f
+(k)$}; %Savings function label
+\node[right] at (5.5,2.5) {$(\delta+\alpha + n)*k$}; %Depreciation line label
+%\draw [->] (1.85,-0.4) -- (1.25,-0.4); %x arrow
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[class=article, crop=false]{standalone}
+\usepackage{my_preamble}
+\begin{document}
+\begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
+	 \draw (0,3.5) node[left]{$MPK$} -- (0,0) node[below left] {$0$} 
+	  -- (6,0) node[below right]{$k=K/L$}; %labels
+	
+	\draw [thick, name path = F1] (0,2) to (5.5,2); %interest rate
+	\draw [name path = F1] (0.5,3) to (5.3,0.3); %MPK line
+	
+	 \draw[loosely dotted] (0,2) node[left]{$1+r$} -| node[pos=0.25,below=3mm] {}
+	  (2.3,0) node[below]{$k^{*}$}; %optimum dotted lines
+	%\draw[loosely dotted] (2.3,3.5) node[left]{} -| node[pos=0.25,below=3mm] {}
+	%  (2.3,2) node[below]{}; %dotted line upwards
+	
+	\node[right] at (3,2.3) {Marginal cost of capital$=(1+r)$}; %Savings function label
+	\node[right] at (5.3,0.3) {$MPK$}; %MPK label
+	%\draw [->] (1.85,-0.4) -- (1.25,-0.4); %x arrow
+\end{tikzpicture}
+\end{document}

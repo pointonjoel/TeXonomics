@@ -1,0 +1,20 @@
+\documentclass[class=article, crop=false]{standalone}
+\usepackage{my_preamble}
+\begin{document}
+\begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
+ \draw (0,3.5) node[left]{$Price$} -- (0,0) node[below left] {$0$} 
+  -- (4,0) node[below right]{$Quantity$}; %labels
+\draw plot[domain=0:3.65,smooth] (\x,2.95-0.81*\x); %BC1
+\fill [fill=blue, fill opacity=0.2] (0,2.95) node[left]{} -- (2,1.35) node[below left] {} -- (0,1.35) node[below left] {}; %fill
+
+%dotted lines
+ \draw[loosely dotted] (0,2.55) node[left]{$WTP_1$} -| node[pos=0.25,below=3mm] {}
+  (0.5,0) node[below]{$q_1$}; %dotted lines
+ \draw[loosely dotted] (0,2.15) node[left]{$WTP_2$} -| node[pos=0.25,below=3mm] {}
+  (1,0) node[below]{$q_2$}; %dotted lines
+ \draw[loosely dotted] (0,1.75) node[left]{$WTP_3$} -| node[pos=0.25,below=3mm] {}
+  (1.5,0) node[below]{$q_3$}; %dotted lines
+ \draw[loosely dotted] (0,1.35) node[left]{$p$} -| node[pos=0.25,below=3mm] {}
+  (2,0) node[below]{$q^{*}$}; %dotted lines
+\end{tikzpicture}
+\end{document}

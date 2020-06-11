@@ -1,0 +1,41 @@
+\documentclass[class=article, crop=false]{standalone}
+\usepackage{my_preamble}
+\begin{document}
+\begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
+%Budget constraints, indifference curves, and the fill 
+ \draw (0,4) node[left]{$B$} -- (0,0) node[below left] {$F$} 
+  -- (6,0) node[below right]{$C$} -- (6,4) node[above right]{$R$} -- (0,4) node[below right]{}; %labels
+\draw [thick, name path = F1] (3,3.5) to [out=275,in=180] (5,1.8); %ICF
+\draw [thick, name path = R1] (2,3) to [out=5,in=90] (4,1); %ICR
+\draw [loosely dotted] (2,3.9125) to (5,0.8375); %Ratio of prices
+\draw [thick, name path = F2,fill=blue, fill opacity=0.2] (2.45,3.45) to [out=275,in=180] (4.5,1.35); %ICF endowment
+\draw [thick, name path = R2,fill=blue, fill opacity=0.2] (2.45,3.45) to [out=5,in=90] (4.5,1.35); %ICR endowment
+
+%lines to mark the quantities
+ \draw[loosely dotted] (0,2.43) node[left]{$B^{*}_F$} -| node[pos=0.25,below=3mm] {}
+  (3.45,0) node[below]{$C^{*}_F$}; %Friday PO lines
+   \draw[loosely dotted] (6,2.43) node[right]{$B^{*}_R$} -| node[pos=0.25,below=3mm] {}
+  (3.45,4) node[above]{$C^{*}_R$}; %Robinson PO lines
+  
+   \draw[loosely dotted] (0,1.35) node[left]{$B^e_F$} -| node[pos=0.25,below=3mm] {}
+  (4.5,0) node[below]{$C^e_F$}; %Friday endownment lines
+   \draw[loosely dotted] (6,1.35) node[right]{$B^e_R$} -| node[pos=0.25,below=3mm] {}
+  (4.5,4) node[above]{$C^e_R$}; %Robinson endownment lines
+  
+%labels and dots
+\node[below] at (2.8,1.9) {$BC^F_1$}; %Friday BC1 label
+\node[below] at (3.2,3.9) {$BC^F_2$}; %Friday BC2 label
+\node[below] at (4.4,3.2) {$BC^R_1$}; %Robinson BC1 label
+\node[below] at (2,3.5) {$BC^R_2$}; %Robinson BC2 label
+\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (4.5,1.35) { }; %endowment dot
+\node[]at (5.1,1.26) {\tiny{Endowmwent}}; %endowment text
+\node[]at (1.3,3.85) {\tiny{Budget constraint}}; %budget constraint text
+\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (3.45,2.43) { }; %PO dot
+
+%arrows
+\draw [->] (0,-0.2) -- (0.5,-0.2); %Friday coconuts arrow
+\draw [->] (-0.2,0) -- (-0.2,0.5); %Friday bananas arrow
+\draw [->] (6.2,4) -- (6.2,3.5); %Friday coconuts arrow
+\draw [->] (6,4.2) -- (5.5,4.2); %Friday bananas arrow
+\end{tikzpicture}
+\end{document}
