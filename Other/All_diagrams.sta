@@ -1,0 +1,5 @@
+\standalonepreambles
+\subpreamble{Sections/Cournot_Section_B.tex}
+\usepackage {my_preamble}\usepackage {pgfplots}
+\endsubpreamble
+\endstandalonepreambles

@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{my_preamble}
+
+
+\title{Macroeconomics Diagrams}
+\author{Joel Pointon}
+\date{June 2020}
+
+\begin{document}
+\maketitle
+All graphs in this document were created by Joel Pointon and can be found on \href{https://github.com/pointonjoel/TeXonomics}{GitHub}. Note that graphs are displayed in alphabetical order.
+
+\listoffigures
+
+\pagebreak
+
+\begin{figure}[H]
+    \centering
+    \input{Graphs/ASAD}
+    \caption{The effect of a demand shock on an open macroeconomy in the short and long run}
+    \label{fig:1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \input{Graphs/invest_theory_1}
+    \caption{Neoclassical optimal level of capital per capita}
+    \label{fig:2}
+\end{figure}
+\begin{figure}[ht]
+	\begin{subfigure}{\textwidth}
+		\centering
+		\input{Graphs/invest_theory_1} 
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\input{Graphs/invest_theory_2}  
+	\end{subfigure}
+	\caption{The Neoclassical theory of investment, investing up to the point where $MPK=1+R$, where profits are maximised.}
+	\label{fig:3}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \input{Graphs/OSM}
+    \caption{The effect of an increase in the nominal money stock in the Overshooting Model}
+    \label{fig:4}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \input{Graphs/RBC_labour_market}
+    \caption{The labour propagation mechanism of the Real Business Cycle model}
+    \label{fig:5}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \input{Graphs/solow_model}
+    \caption{Steady state and the Golden Rule in the Solow model}
+    \label{fig:6}
+\end{figure}
+\end{document}
