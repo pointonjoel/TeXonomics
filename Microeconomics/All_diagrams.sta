@@ -1,5 +1,71 @@
 \standalonepreambles
-\subpreamble{Sections/Cournot_Section_B.tex}
+\subpreamble{Graphs/2nd_degree_pd.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/3rd_degree_pd.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/aggregate_hetero_p_comp.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/BC_shift.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Bertrand.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/bertrand_incentives.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/compensating_variation.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/consumer_surplus.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Cournot.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Cournot_Lower_MCs.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Cournot_Monop.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Cournot_Section_B.tex}
 \usepackage {my_preamble}\usepackage {pgfplots}
+\endsubpreamble
+\subpreamble{Graphs/engel_curve.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/game_tree.tex}
+\usepackage {my_preamble}\tikzset {solid node/.style={circle,draw,inner sep=2,fill=black},hollow node/.style={circle,draw,inner sep=2},empty node/.style={rectangle,draw,fill=white,color=white}}\newcommand \payoff [1]{$\begin {pmatrix} #1 \end {pmatrix}$}
+\endsubpreamble
+\subpreamble{Graphs/Market_structures.tex}
+\usepackage {tikz}\renewcommand *\familydefault {\sfdefault }\usetikzlibrary {mindmap,trees,shadows}
+\endsubpreamble
+\subpreamble{Graphs/natural_monop.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/p_comp_industry_supply.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/p_competition.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/p_compliments.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Public_Goods_Optimum.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/quasi_linear.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/Stackelberg.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/total_surplus.tex}
+\usepackage {my_preamble}
 \endsubpreamble
 \endstandalonepreambles

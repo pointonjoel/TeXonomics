@@ -1,5 +1,20 @@
 \standalonepreambles
-\subpreamble{Sections/Cournot_Section_B.tex}
-\usepackage {my_preamble}\usepackage {pgfplots}
+\subpreamble{Graphs/ASAD.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/invest_theory_1.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/invest_theory_2.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/OSM.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/RBC_labour_market.tex}
+\usepackage {my_preamble}
+\endsubpreamble
+\subpreamble{Graphs/solow_model.tex}
+\usepackage {my_preamble}
 \endsubpreamble
 \endstandalonepreambles
