@@ -3,8 +3,7 @@
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
 	%axis and labels
-	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} 
-	  -- (4,0) node[below right]{$q$};
+	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$q$};
 	  
 	%graphs	
 	\draw[] plot [smooth, tension=1] coordinates {(0.2,3) (1.75,1.5) (3.5,3)}; %AC
@@ -27,10 +26,5 @@
 	\node[right] at (3.5,3) {$AC$}; %AC label 
 	\node[right] at (3.5,2) {$AVC$}; %AVC label
 	\node[right] at (1.1,0.2) {$MC$}; %MC label
-	
-	%dotted lines
-	%\draw[loosely dotted] (0,1) node[left]{$S_1$} -| node[pos=0.25,below=3mm] {}
-  (1,0) node[below]{$P_1$}; %S1 and P1
-	
 \end{tikzpicture}
 \end{document}

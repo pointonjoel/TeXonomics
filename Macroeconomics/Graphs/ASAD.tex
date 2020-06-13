@@ -3,8 +3,8 @@
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
 	%axis
-	\draw (0,4) node[left]{Inflation} -- (0,0) node[below left] {$0$} 
-	  -- (4,0) node[below right]{Real GDP}; %labels
+	\draw (0,4) node[left]{Inflation} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{Real GDP};
+	
 	%AS
 	\draw[] (2,0) -- (2,3.5); %LRAS1	
 	\draw plot[domain=0.75:3.25,smooth] (\x,-0.5+\x); %SRAS1
@@ -24,8 +24,6 @@
 	 \draw[loosely dotted] (0,2) node[left]{$\mu_2=\pi_2$} -| node[pos=0.25,below=3mm] {}
 	  (2,0) node[below]{}; %dotted lines new equib
 	  
-
-	
 	%labels
 	\node[above] at (2,3.5) {$LRAS_{1}$}; %LRAS1 label
 	\node[right] at (3.75,1.5) {$LRAD_{1}$}; %LRAD1 label
@@ -41,13 +39,13 @@
 	\draw [->] (2.7,0.85) -- (2.9,1.05); %SRAD arrow
 	\draw [->] (2.9,2.45) -- (2.7,2.65); %SRAS arrow
 	
-	%dots
-	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2,1.5) { };equib
-	\node[below left]at (1.9,1.55) {\tiny{A}};
-	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2.25,1.75) { };SR equib
-	\node[right]at (2.25,1.75) {\tiny{B}};
-	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2,2) { };new LR equib
-	\node[above right]at (2.1,1.95) {\tiny{C}};
+	%dots and labels
+	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2,1.5) { }; %A - equib
+	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2.25,1.75) { }; %B- SR equib
+	\node[style={fill=black,circle,inner sep=0pt,minimum size=4pt}] at (2,2) { }; %C- new LR equib
 	
+	\node[below left]at (1.9,1.55) {\tiny{A}}; %A label
+	\node[right]at (2.25,1.75) {\tiny{B}}; %B label
+	\node[above right]at (2.1,1.95) {\tiny{C}}; %C label
 \end{tikzpicture}
 \end{document}

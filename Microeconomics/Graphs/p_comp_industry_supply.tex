@@ -3,10 +3,11 @@
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
 	%axis and labels
-	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$q$};
-	   \draw (5,3.5) node[left]{$P$} -- (5,0) node[below left] {$0$} -- (10.5,0) node[below right]{$Q$};
-	   \node[] at (2,3.5) {$Firm$}; %Firm label  
-	   \node[] at (7.75,3.5) {$Market$}; %Market label  
+	\draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$q$};
+	\draw (5,3.5) node[left]{$P$} -- (5,0) node[below left] {$0$} -- (10.5,0) node[below right]{$Q$};
+	\node[] at (2,3.5) {$Firm$}; %Firm label  
+	\node[] at (7.75,3.5) {$Market$}; %Market label  
+	
 	%Firm--------------------------------------
 		%graphs	
 		\draw[] plot [smooth, tension=1] coordinates {(0.2,3) (1.75,1.5) (3.5,3)}; %AC
@@ -29,7 +30,9 @@
 		\draw[] plot [smooth, tension=1] coordinates {(0,1.7) (1.1,0.2) (2,3)}; %MC
 	
 	%Market------------------------------------
-		\draw[] (6,3) -- (9,0.2); %Demand		
+		\draw[] (6,3) -- (9,0.2); %Demand
+		
+				
 		%Market supply curve	
 		\draw[very thick, blue] (5,0) -- (5,0.5); %part 1
 		\draw[very thick, blue, loosely dashed] (5,0.5)--(9, 0.5); %part 2
@@ -47,6 +50,5 @@
 		\node[right] at (7,3) {$S_{1}$}; %SR1 supply label  
 		\node[right] at (8.9,2) {$S_{2}$}; %SR2 supply label  
 		\node[right] at (10.18,1.2) {$S_{3}$}; %SR3 supply label  
-	
 \end{tikzpicture}
 \end{document}

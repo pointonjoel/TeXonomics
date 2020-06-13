@@ -3,8 +3,7 @@
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
 	%axis
-	 \draw (0,4) node[left]{$Q_{B}$} -- (0,0) node[below left] {$0$} 
-	  -- (4,0) node[below right]{$Q_{A}$};
+	 \draw (0,4) node[left]{$Q_{B}$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$Q_{A}$};
 	  
 	 %BRFs
 	\draw[] (0,3) -- (1.5,0); %BRF A
@@ -17,18 +16,13 @@
 	\draw[] plot [smooth, tension=1] coordinates {(0.4,0.3) (1,1) (0.4,2)}; %B's iso-profit 1
 	\draw[red] plot [smooth, tension=1] coordinates {(0.8,0.1) (1.54,0.73) (0.8,1.9)}; %B's iso-profit 2
 	
-	%collusion
-	%\draw[] (0.46,0.72) -- (0.75,0.5); %Contract curve	
-	%\draw[] plot [smooth, tension=1] coordinates {(0.375,0.225) (1.05,0.84) (2,0.225)}; %A's iso-profit collusion
-	%\draw[] plot [smooth, tension=1] coordinates {(0.26,0.35) (0.82,1.14) (0.225,2.025)}; %B's iso-profit collusion
-	
 	%labels
 	\node[below] at (0.5,3.1) {$BRF_{A}$}; %BRF A label
 	\node[above] at (3.2,0) {$BRF_{B}$}; %BRF B label
 	%\node[below] at (1.5,0) {$150$}; %A's monopoly quantity
 	\node[left] at (0,1.5) {$150$}; %B's monopoly quantity
-	\node[below] at (3,0) {$300$}; %PC quantity - A's???
-	\node[left] at (0,3) {$300$}; %PC quantity
+	\node[below] at (3,0) {$300$}; %A's PC quantity
+	\node[left] at (0,3) {$300$}; %B's PC quantity
 	\node[above left]at (0.55,0.6) {$\pi_A^C$}; %A's iso-profit 1 label
 	\node[above right]at (0.5,0.1) {$\pi_B^C$}; %B's iso-profit 1 label
 	\node[above left, red]at (2.7,0.4) {$\pi_A^{C2}$}; %A's iso-profit 2 label
@@ -48,7 +42,5 @@
 	%arrows
 	\draw [->] (1,-0.4) -- (1.5,-0.4); %x arrow
 	\draw [->] (-0.7,1) -- (-0.7,0.8); %y arrow
-	%\draw [->] (0.87,1.5) -- (1.17,1.5); %B's arrow
-	%\draw [->] (2.1,0.4) -- (2.1,0.25); %A's arrow
 \end{tikzpicture}
 \end{document}

@@ -2,7 +2,7 @@
 \usepackage{my_preamble}
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
-	%axis and labels
+	%axis and labels----------------------------
 	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$q$};
 	   \draw (5,3.5) node[left]{$P$} -- (5,0) node[below left] {$0$} -- (10.5,0) node[below right]{$Q$};
 	   \node[] at (2,3.5) {$Individual firms$}; %Firm label  
@@ -38,7 +38,9 @@
 		\node[right] at (3.2,3) {$AVC^{b}$}; %AVC b label 
 	
 	%Market------------------------------------
-		\draw[] (8.4,3) -- (10.5,1); %Demand		
+		%Demand
+		\draw[] (8.4,3) -- (10.5,1);
+				
 		%Market supply curve	
 		\draw[very thick] (5,0) -- (5,0.58); %part 1
 		\draw[very thick, loosely dashed] (5,0.58)--(7.22, 0.58); %part 2

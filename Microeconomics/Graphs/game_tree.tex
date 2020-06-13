@@ -1,5 +1,6 @@
 \documentclass[class=article, crop=false]{standalone}
 \usepackage{my_preamble}
+%Adapted from https://tex.stackexchange.com/questions/406649/drawing-a-game-tree-on-tikz/409093
 
 \tikzset{
   % Two node styles for game trees: solid and hollow
@@ -14,7 +15,6 @@
 }
 
 \begin{document}
-
 \begin{tikzpicture}[every level 0 node/.style={draw,hollow node},
                    every level 1 node/.style={draw,hollow node},
                    every level 2 node/.style={draw,hollow node}, 

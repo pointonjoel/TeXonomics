@@ -3,18 +3,13 @@
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
 	%axis
-	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} 
-	  -- (4,0) node[below right]{$Q$};
-	  
+	 \draw (0,3.5) node[left]{$P$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$Q$};
+	 
+	%curves
 	\draw[] (0,2.5) -- (4,0); %Demand
 	\draw[] (0,2.5) -- (2,0); %MR
-
-	%Iso-profits
 	\draw[] plot [smooth, tension=1] coordinates {(0.2,2.9) (1.1,1) (4,0.35)}; %ATC
 	\draw[] plot [smooth, tension=1] coordinates {(0.1,1.5) (1.1,0.5) (4,0.125)}; %MC
-
-	
-	
 	
 	%labels
 	\node[above] at (0.3,2.9) {$ATC$}; %ATC label
@@ -34,6 +29,6 @@
 	\draw[loosely dotted] (0,0.13) node[left]{$p^{e}$} -| node[pos=0.25,below=3mm] {}
 	  (3.79,0) node[below]{$q^{e}$}; %allocatively efficient dotted lines
 	  
-	  	\fill [fill=red, fill opacity=0.2] (1.73,1.43) node[left]{} -- (1.73,0.32) node[below left] {} -- (2.5,0.2) node[below left] {} -- (3.79,0.13) node[below left] {}; %blue fill (with an intermediate coordinate to make it seem smooth)
+	  	\fill [fill=red, fill opacity=0.2] (1.73,1.43) node[left]{} -- (1.73,0.32) node[below left] {} -- (2.5,0.2) node[below left] {} -- (3.79,0.13) node[below left] {}; %red fill (with an intermediate coordinate to make it seem smooth)
 \end{tikzpicture}
 \end{document}

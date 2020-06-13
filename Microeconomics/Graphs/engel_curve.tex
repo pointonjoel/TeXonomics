@@ -2,29 +2,26 @@
 \usepackage{my_preamble}
 \begin{document}
 \begin{tikzpicture}[thick,font=\sffamily,scale=1.5]
-%axies
- \draw (0,3.5) node[left]{$y$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$x$}; %top graph
- \draw (0,-0.5) node[left]{$M$} -- (0,-4) node[below left] {$0$} -- (4,-4) node[below right]{$x$}; %bottom graph
-%top graph
-	%equations
-		%original
-		\draw[] (0,1.5) -- (1.4,0); %BC1
-		\draw [thick] (0.1,2.3) to [out=271,in=179] (2.2,0.1); %IC1
+	%axies
+	\draw (0,3.5) node[left]{$y$} -- (0,0) node[below left] {$0$} -- (4,0) node[below right]{$x$}; %top graph
+	\draw (0,-0.5) node[left]{$M$} -- (0,-4) node[below left] {$0$} -- (4,-4) node[below right]{$x$}; %bottom graph
+
+	%top graph------------------------------------------------------
+	%BCs
+	\draw[] (0,1.5) -- (1.4,0); %BC1
+	\draw[] (0,2.3) -- (2.1,0); %BC2
+	\draw[] (0,3.1) -- (2.9,0); %BC3
 		
-		%shift1
-		\draw[] (0,2.3) -- (2.1,0); %BC2
-		\draw [thick] (0.6,2.4) to [out=271,in=179] (2.8,0.35); %IC2
-		
-		%shift2
-		\draw[] (0,3.1) -- (2.9,0); %BC3
-		\draw [thick] (1.15,2.5) to [out=271,in=179] (3.4,0.7); %IC3
+	\draw [thick] (0.1,2.3) to [out=271,in=179] (2.2,0.1); %IC1
+	\draw [thick] (0.6,2.4) to [out=271,in=179] (2.8,0.35); %IC2
+	\draw [thick] (1.15,2.5) to [out=271,in=179] (3.4,0.7); %IC3
 	
 	%dotted lines
-	 \draw[loosely dotted] (0,0.75) node[left]{$y_1$} -| node[pos=0.25,below=3mm] {}
-	  (0.73,0) node[below]{$x_1$}; %x1 line  
-	 \draw[loosely dotted] (0,1.05) node[left]{$y_2$} -| node[pos=0.25,below=3mm] {} (1.15,0) node[below]{$x_2$}; %x2 line 
-	 \draw[loosely dotted] (0,1.4) node[left]{$y_3$} -| node[pos=0.25,below=3mm] {} (1.6,0) node[below]{$x_3$}; %x3 and horizontal lines
+	\draw[loosely dotted] (0,0.75) node[left]{$y_1$} -| node[pos=0.25,below=3mm] {} (0.73,0) node[below]{$x_1$}; %x1 line  
+	\draw[loosely dotted] (0,1.05) node[left]{$y_2$} -| node[pos=0.25,below=3mm] {} (1.15,0) node[below]{$x_2$}; %x2 line 
+	\draw[loosely dotted] (0,1.4) node[left]{$y_3$} -| node[pos=0.25,below=3mm] {} (1.6,0) node[below]{$x_3$}; %x3 and horizontal lines
 	  
+	%labels
 	\node[below] at (-0.5,1.8) {$BC_{M1}$}; %BC label
 	\node[below] at (-0.5,2.6) {$BC_{M2}$}; %BC2 label
 	\node[below] at (-0.5,3.3) {$BC_{M3}$}; %BC3 label
@@ -33,7 +30,8 @@
 	\node[below] at (1.1,2.9) {$IC_{3}$}; %IC3 label
 	\draw [->] (0.5,-0.4) -- (1.25,-0.4); %x arrow
 	%\draw [->] (-0.5,1.35) -- (-0.5,1.1); %y arrow
-%bottom graph-------------------------------
+
+	%bottom graph--------------------------------------------------
 	%x Lines
 	\draw[loosely dotted] (0.73,0) -- (0.73,-4); %x1
 	\draw[loosely dotted] (1.15,0) -- (1.15,-4); %x2
